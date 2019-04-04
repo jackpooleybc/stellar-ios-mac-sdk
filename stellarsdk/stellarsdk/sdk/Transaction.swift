@@ -56,6 +56,7 @@ public class Transaction {
         }
         
         self.transactionXDR = TransactionXDR(sourceAccount: self.sourceAccount.keyPair.publicKey,
+                                             baseFee: self.baseFee,
                                              seqNum: self.sourceAccount.incrementedSequenceNumber(),
                                              timeBounds: self.timeBounds?.toXdr(),
                                              memo: self.memo.toXDR(),
